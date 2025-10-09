@@ -6,7 +6,7 @@ const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('Staff');
+  const [role, setRole] = useState('Manager');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -50,7 +50,6 @@ const Signup = () => {
         >
           <option value="Admin">Admin</option>
           <option value="Manager">Manager</option>
-          <option value="Staff">Staff</option>
         </select>
         <button className="btn" type="submit" style={{ width: '100%' }}>Sign Up</button>
         <p style={{ textAlign: 'center', marginTop: '20px', color: '#666' }}>

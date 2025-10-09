@@ -9,7 +9,7 @@ exports.signup = async (req, res) => {
     if (user) {
       return res.status(400).json({ msg: 'User already exists' });
     }
-    user = new User({ name, email, password, role: role || 'Staff' });
+    user = new User({ name, email, password, role: role || 'Manager' });
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(password, salt);
     await user.save();
